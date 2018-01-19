@@ -421,6 +421,10 @@ layui.define('layer', function(exports){
       ,vers = othis.attr('lay-verify').split('|')
       ,verType = othis.attr('lay-verType') //提示方式
       ,value = othis.val();
+     
+     if(value === null) {
+      value = "";
+     }
       
       othis.removeClass(DANGER);
       layui.each(vers, function(_, thisVer){
